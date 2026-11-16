@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Métricas do link</title>
+  <link rel="stylesheet" href="/css/estilo.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <main>
+    <a href="/">← voltar</a>
+    <h1 id="titulo">Métricas</h1>
+    <p class="sub" id="destino"></p>
+
+    <div class="kpis">
+      <div class="card kpi"><span>Cliques</span><strong id="k-total">-</strong></div>
+      <div class="card kpi"><span>Visitantes únicos</span><strong id="k-unicos">-</strong></div>
+      <div class="card kpi"><span>Principal país</span><strong id="k-pais">-</strong></div>
+      <div class="card kpi"><span>Principal origem</span><strong id="k-origem">-</strong></div>
+    </div>
+
+    <div class="grade">
+      <div class="card largo"><h3>Cliques nos últimos 30 dias</h3><canvas id="g-dias"></canvas></div>
+      <div class="card largo"><h3>Cliques por horário do dia</h3><canvas id="g-horas"></canvas></div>
+      <div class="card"><h3>Navegadores</h3><canvas id="g-navegador"></canvas></div>
+      <div class="card"><h3>Sistemas operacionais</h3><canvas id="g-sistema"></canvas></div>
+      <div class="card"><h3>Dispositivos</h3><canvas id="g-dispositivo"></canvas></div>
+      <div class="card"><h3>Países (aproximado)</h3><canvas id="g-pais"></canvas></div>
+    </div>
+  </main>
+  <footer>Atualiza automaticamente a cada 10 segundos</footer>
+  <script type="module" src="/js/estatisticas.js"></script>
+</body>
+</html>

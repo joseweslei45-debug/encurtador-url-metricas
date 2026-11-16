@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encurtador com Métricas</title>
+  <link rel="stylesheet" href="/css/estilo.css" />
+</head>
+<body>
+  <main>
+    <h1>🔗 Encurtador com Métricas</h1>
+    <p class="sub">Crie links curtos e descubra quem clicou: quando, de onde, em qual navegador e dispositivo.</p>
+
+    <section class="card">
+      <form class="encurtar" id="form">
+        <input id="url" type="url" placeholder="Cole sua URL longa aqui..." required />
+        <input id="alias" placeholder="Alias (opcional)" pattern="[A-Za-z0-9_\-]{3,32}" title="3 a 32 caracteres: letras, números, - ou _" />
+        <select id="expira">
+          <option value="">Nunca expira</option>
+          <option value="1">Expira em 1 dia</option>
+          <option value="7">Expira em 7 dias</option>
+          <option value="30">Expira em 30 dias</option>
+        </select>
+        <button type="submit">Encurtar</button>
+      </form>
+      <p class="erro" id="erro" hidden></p>
+      <div class="resultado" id="resultado" hidden>
+        <strong id="curta"></strong>
+        <div>
+          <button class="fantasma" id="copiar" type="button">Copiar</button>
+          <a id="painel"><button class="fantasma" type="button">Ver métricas</button></a>
+        </div>
+      </div>
+    </section>
+
+    <h2>Links recentes</h2>
+    <section class="card">
+      <table>
+        <thead><tr><th>Código</th><th>Destino</th><th class="num">Cliques</th><th></th></tr></thead>
+        <tbody id="links"></tbody>
+      </table>
+      <p class="vazio" id="vazio">Nenhum link criado ainda.</p>
+    </section>
+  </main>
+  <footer>Feito por <a href="https://github.com/joseweslei45-debug">Weslei Sousa</a></footer>
+  <script type="module" src="/js/inicio.js"></script>
+</body>
+</html>
